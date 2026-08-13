@@ -19,7 +19,7 @@ The primary objective of this project is to apply core **Object-Oriented Program
 
 ---
 
-## 🏗️ Object-Oriented Design (OOP) Implementation
+## 🏗️ Object-Oriented Programming (OOP) Implementation
 
 * **Encapsulation:** Sensitive data fields (such as stored passwords, master keys, and user details) are restricted to private scope within model classes, exposed only through validated accessor and mutator methods.
 * **Abstraction:** Core components—including database connections, cryptographic functions, and password generation strategies—are declared via interfaces and abstract classes to decouple implementation details from the user interface.
