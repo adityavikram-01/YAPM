@@ -3,7 +3,7 @@ Yet another Password Manager
 # Android Password Manager App
 
 ## 📌 Overview
-The **Android Password Manager** is a secure mobile application designed to simplify password creation and management. Built using **Java** and backed by a **MySQL** database, the application serves as a safe vault for storing user login credentials while offering on-demand generation of strong, randomized passwords.
+The **Android Password Manager** is a secure mobile application designed to simplify password creation and management. Built using **Java** and backed by a **SQLite** database, the application serves as a safe vault for storing user login credentials while offering on-demand generation of strong, randomized passwords.
 
 The primary objective of this project is to apply core **Object-Oriented Programming (OOP)** principles—such as Encapsulation, Abstraction, Inheritance, and Polymorphism—to deliver a clean, modular, and maintainable software architecture.
 
@@ -32,7 +32,7 @@ The primary objective of this project is to apply core **Object-Oriented Program
 
 * **Language:** Java
 * **Platform:** Android SDK
-* **Database:** MySQL
+* **Database:** SQLite
 * **UML Diagram:** Draw.io
 * **Build Tool:** Gradle
 
