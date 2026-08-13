@@ -47,4 +47,5 @@ The backend relational database consists of two core entities:
 
 ## 💻 Contributors
 
-**Aditya Vikram** 20251501190
+* **Aditya Vikram** 20251501190
+* **Varun Prasad**  20251501189
