@@ -50,3 +50,4 @@ The backend relational database consists of two core entities:
 * **Aditya Vikram** 20251501190
 * **Varun Prasad**  20251501189
 * **Sakshi Hulgeri** 20251501154
+* **Khushi Soni** 20251502014
