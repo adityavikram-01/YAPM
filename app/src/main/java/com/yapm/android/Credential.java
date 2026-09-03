@@ -1,9 +1,9 @@
 package com.yapm.android;
 
 public abstract class Credential {
-    private String username;
-    private String password;
-    private String notes;
+    protected String username;
+    protected String password;
+    protected String notes;
 
     public Credential() {}
 
