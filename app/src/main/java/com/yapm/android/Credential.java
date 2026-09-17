@@ -4,8 +4,11 @@ public abstract class Credential {
     protected String username;
     protected String password;
     protected String notes;
+    protected static int count=0;
 
-    public Credential() {}
+    public Credential() {
+        count++;
+    }
 
     public Credential(String username, String password, String notes) {
         this.username = username;
