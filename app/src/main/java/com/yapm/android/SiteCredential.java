@@ -1,6 +1,6 @@
 package com.yapm.android;
 
-public class SiteCredential extends Credential {
+public final class SiteCredential extends Credential {
     private String site;
 
     public SiteCredential() { super(); }
