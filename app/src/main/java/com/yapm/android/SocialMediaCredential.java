@@ -1,6 +1,6 @@
 package com.yapm.android;
 
-public class SocialMediaCredential extends Credential {
+public final class SocialMediaCredential extends Credential {
     private String platform;
 
     public SocialMediaCredential(String platform, String username, String password, String notes) {
