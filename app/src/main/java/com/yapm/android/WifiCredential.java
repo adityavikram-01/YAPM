@@ -1,6 +1,6 @@
 package com.yapm.android;
 
-public class WifiCredential extends Credential {
+public final class WifiCredential extends Credential {
     private String ssid;
 
     public WifiCredential(String ssid, String username, String password, String notes) {
