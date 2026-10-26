@@ -19,6 +19,8 @@ import com.yapm.android.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,9 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         binding.fab.setOnClickListener(
-                view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show()
+               view -> { Toast.makeText(this, "Choose your action", Toast.LENGTH_SHORT).show();}
         );
     }
 

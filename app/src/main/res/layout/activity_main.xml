@@ -13,11 +13,6 @@
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
@@ -28,7 +23,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginBottom="60dp"
+        android:scaleType="center"
+        app:elevation="15dp"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:fabCustomSize="65dp"
+        app:maxImageSize="35dp" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="150dp"
+        android:scaleType="center"
+        app:elevation="15dp"
+        app:srcCompat="@mipmap/ic_find_monochrome"
+        app:fabCustomSize="65dp"
+        app:maxImageSize="35dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
