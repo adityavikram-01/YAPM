@@ -1,6 +1,7 @@
+package com.yapm.android;
 import java.security.SecureRandom;
 
-public class PaswordGenerator {
+public class PasswordGenerator {
     private static final char[] SMALL = "abcdefghijklmnopqrstuvwxyz".toCharArray();
     private static final char[] LARGE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
     private static final char[] DIGIT = "0123456789".toCharArray();

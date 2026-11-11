@@ -9,5 +9,46 @@
         android:id="@+id/FirstFragment"
         android:name="com.yapm.android.FirstFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_first"/>
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_AddCredentialFragment"
+            app:destination="@id/AddCredentialFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SearchCredentialFragment"
+            app:destination="@id/SearchCredentialFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddCredentialFragment"
+        android:name="com.yapm.android.AddCredentialFragment"
+        android:label="Add Credential"
+        tools:layout="@layout/add_credential" />
+
+    <fragment
+        android:id="@+id/SearchCredentialFragment"
+        android:name="com.yapm.android.SearchCredentialFragment"
+        android:label="Search Credentials"
+        tools:layout="@layout/search_credential" >
+    <action
+        android:id="@+id/action_SearchCredentialFragment_to_CredentialDetailsFragment"
+        app:destination="@id/CredentialDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/CredentialDetailsFragment"
+        android:name="com.yapm.android.CredentialDetailsFragment"
+        android:label="Credential Details"
+        tools:layout="@layout/credential_details" >
+    <action
+        android:id="@+id/action_CredentialDetailsFragment_to_EditCredentialFragment"
+        app:destination="@id/EditCredentialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditCredentialFragment"
+        android:name="com.yapm.android.EditCredentialFragment"
+        android:label="Edit Credential"
+        tools:layout="@layout/add_credential" />
 </navigation>

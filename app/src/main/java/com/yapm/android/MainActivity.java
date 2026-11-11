@@ -47,14 +47,72 @@ public class MainActivity extends AppCompatActivity {
         if (navHostFragment != null) {
             NavController navController = navHostFragment.getNavController();
 
+            navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+
+                if (destination.getId() == R.id.FirstFragment) {
+                    showFab(binding);
+                } else {
+                    hideFabMenu(binding);
+                }
+
+            });
+
             appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
             NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+            binding.btnAdd.setOnClickListener(view -> {
+                navController.navigate(R.id.action_FirstFragment_to_AddCredentialFragment);
+            });
+
+            binding.btnSearch.setOnClickListener(view -> {
+                navController.navigate(
+                        R.id.action_FirstFragment_to_SearchCredentialFragment
+                );
+            });
         }
 
         binding.fab.setOnClickListener(
-               view -> { Toast.makeText(this, "Choose your action", Toast.LENGTH_SHORT).show();}
-        );
+               view -> { try { if (binding.btnAdd.getVisibility() == View.GONE) {
+                   Toast.makeText(this, "Choose your action", Toast.LENGTH_SHORT).show();
+                   binding.btnAdd.setVisibility(View.VISIBLE);
+                   binding.btnSearch.setVisibility(View.VISIBLE);
+                   binding.btnImportExport.setVisibility(View.VISIBLE);
+                   if (binding.btnAdd == null)
+                       throw new IllegalStateException("Add Button is not initialized");
+                   if (binding.btnSearch == null)
+                       throw new IllegalStateException("Search Button is not initialized");
+                   if (binding.btnImportExport == null)
+                       throw new IllegalStateException("Import/Export Button is not initialized");
+
+
+               }
+               else {
+                   binding.btnAdd.setVisibility(View.GONE);
+                   binding.btnSearch.setVisibility(View.GONE);
+                   binding.btnImportExport.setVisibility(View.GONE);
+               }
+               }
+
+
+
+
+               catch (Exception e) {
+                   Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+               }
+              });
     }
+
+    private void hideFabMenu(ActivityMainBinding binding) {
+        binding.fab.setVisibility(View.GONE);
+        binding.btnAdd.setVisibility(View.GONE);
+        binding.btnSearch.setVisibility(View.GONE);
+        binding.btnImportExport.setVisibility(View.GONE);
+    }
+
+    private void showFab(ActivityMainBinding binding) {
+        binding.fab.setVisibility(View.VISIBLE);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -82,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment_content_main);
-        boolean handled = false;
+        boolean
+                handled = false;
         if (navHostFragment != null) {
             NavController navController = navHostFragment.getNavController();
             handled = NavigationUI.navigateUp(navController, appBarConfiguration);

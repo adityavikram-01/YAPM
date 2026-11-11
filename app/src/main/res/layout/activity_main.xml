@@ -41,11 +41,40 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="213dp"
         android:scaleType="center"
         app:elevation="15dp"
         app:srcCompat="@mipmap/ic_find_monochrome"
-        app:fabCustomSize="65dp"
-        app:maxImageSize="35dp" />
+        app:fabCustomSize="50dp"
+        app:maxImageSize="35dp"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="280dp"
+        android:scaleType="center"
+        app:elevation="15dp"
+        app:srcCompat="@drawable/ic_add_cred"
+        app:fabCustomSize="50dp"
+        app:maxImageSize="35dp"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_import_export"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="145dp"
+        android:scaleType="center"
+        app:elevation="15dp"
+        app:srcCompat="@drawable/outline_convert_to_text_24"
+        app:fabCustomSize="50dp"
+        app:maxImageSize="35dp"
+        android:visibility="gone"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

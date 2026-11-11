@@ -1,21 +1,36 @@
+
 package com.yapm.android;
+
+import android.content.Context;
 import java.util.ArrayList;
 public class Vault {
-private ArrayList<Credential> credentials;
 
-public Vault(){
-    credentials = new ArrayList<>();
-}
+    private final CredentialRepository repository;
 
-public void addCredential(Credential credential) {
-    credentials.add(credential);
-}
+    public Vault(Context context) {
+        repository = new CredentialRepository(context);
+    }
 
-public void removeCredential(Credential credential) {
-    credentials.remove(credential);
-}
+    public long add(Credential credential) {
+        return repository.add(credential);
+    }
 
-public ArrayList<Credential> getCredentials() {
-    return credentials;
-}
+    public Credential get(String type, String service, String username) {
+        return repository.get(type, service, username);
+    }
+
+    public ArrayList<Credential> search(String service, String type) {
+        return repository.search(service, type);
+    }
+    public int update(Credential oldCredential, Credential newCredential) {
+        return repository.update(oldCredential, newCredential);
+    }
+
+    public int remove(Credential credential) {
+        return repository.remove(credential);
+    }
+
+    public void close() {
+        repository.close();
+    }
 }
