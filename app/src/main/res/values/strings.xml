@@ -7,4 +7,6 @@
 
     <string name="Welcome">
     Welcome to Yet Another Password Manager. Our key feature is the complete offline system, which does not store your credentials outside your device. So please keep frequent backups because we can\'t. </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

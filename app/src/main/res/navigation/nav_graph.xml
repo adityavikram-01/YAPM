@@ -19,6 +19,9 @@
             android:id="@+id/action_FirstFragment_to_SearchCredentialFragment"
             app:destination="@id/SearchCredentialFragment" />
 
+        <action
+            android:id="@+id/action_FirstFragment_to_ImportExportFragment"
+            app:destination="@id/ImportExportFragment" />
     </fragment>
 
     <fragment
@@ -46,9 +49,16 @@
         android:id="@+id/action_CredentialDetailsFragment_to_EditCredentialFragment"
         app:destination="@id/EditCredentialFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/EditCredentialFragment"
         android:name="com.yapm.android.EditCredentialFragment"
         android:label="Edit Credential"
         tools:layout="@layout/add_credential" />
+
+    <fragment
+        android:id="@+id/ImportExportFragment"
+        android:name="com.yapm.android.ImportExportFragment"
+        android:label="Import / Export"
+        tools:layout="@layout/fragment_import_export" />
 </navigation>

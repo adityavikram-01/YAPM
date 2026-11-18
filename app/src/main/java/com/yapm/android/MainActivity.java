@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                         R.id.action_FirstFragment_to_SearchCredentialFragment
                 );
             });
+
+            binding.btnImportExport.setOnClickListener(view -> {
+                navController.navigate(
+                        R.id.action_FirstFragment_to_ImportExportFragment
+                );
+            });
         }
 
         binding.fab.setOnClickListener(

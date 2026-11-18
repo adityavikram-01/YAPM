@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import / Export"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a backup of your credentials or restore an existing backup."
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Export Database"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save a backup of your YAPM database to your device."
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_export_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Export Database" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#808080"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Database"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restore your credentials from a previously exported YAPM database."
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_import_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Database" />
+
+    </LinearLayout>
+
+</ScrollView>
