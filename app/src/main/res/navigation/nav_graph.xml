@@ -3,7 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/AuthenticationFragment">
+
+    <fragment
+        android:id="@+id/AuthenticationFragment"
+        android:name="com.yapm.android.AuthenticationFragment"
+        android:label="Authentication"
+        tools:layout="@layout/fragment_authentication">
+
+        <action
+            android:id="@+id/action_AuthenticationFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:popUpTo="@id/AuthenticationFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -22,6 +36,7 @@
         <action
             android:id="@+id/action_FirstFragment_to_ImportExportFragment"
             app:destination="@id/ImportExportFragment" />
+
     </fragment>
 
     <fragment
@@ -34,20 +49,24 @@
         android:id="@+id/SearchCredentialFragment"
         android:name="com.yapm.android.SearchCredentialFragment"
         android:label="Search Credentials"
-        tools:layout="@layout/search_credential" >
-    <action
-        android:id="@+id/action_SearchCredentialFragment_to_CredentialDetailsFragment"
-        app:destination="@id/CredentialDetailsFragment" />
+        tools:layout="@layout/search_credential">
+
+        <action
+            android:id="@+id/action_SearchCredentialFragment_to_CredentialDetailsFragment"
+            app:destination="@id/CredentialDetailsFragment" />
 
     </fragment>
+
     <fragment
         android:id="@+id/CredentialDetailsFragment"
         android:name="com.yapm.android.CredentialDetailsFragment"
         android:label="Credential Details"
-        tools:layout="@layout/credential_details" >
-    <action
-        android:id="@+id/action_CredentialDetailsFragment_to_EditCredentialFragment"
-        app:destination="@id/EditCredentialFragment" />
+        tools:layout="@layout/credential_details">
+
+        <action
+            android:id="@+id/action_CredentialDetailsFragment_to_EditCredentialFragment"
+            app:destination="@id/EditCredentialFragment" />
+
     </fragment>
 
     <fragment
@@ -61,4 +80,5 @@
         android:name="com.yapm.android.ImportExportFragment"
         android:label="Import / Export"
         tools:layout="@layout/fragment_import_export" />
+
 </navigation>

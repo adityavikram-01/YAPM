@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YAPM"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tv_auth_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your master phrase"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tv_master_phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btn_copy_phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Master Phrase"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/et_master_phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your 12-word phrase"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:minLines="3"
+            android:gravity="top"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btn_authenticate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
